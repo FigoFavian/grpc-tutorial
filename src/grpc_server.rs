@@ -99,7 +99,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     Server::builder()
         .add_service(PaymentServiceServer::new(payment_service))
         .add_service(TransactionServiceServer::new(transaction_service))
-        .add_service(ChatServiceServer::new(chat_service))
+        .add_service(ChatServiceServer::new(chat_service)) 
         .serve(addr)
         .await?;
 
